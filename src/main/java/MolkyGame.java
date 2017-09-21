@@ -12,6 +12,18 @@ public class MolkyGame {
         }
     }
 
+    public boolean won() {
+        if ( score > 50 )
+        {
+            score = 25;
+        }
+        if ( score == 50)
+        {
+            won = true;
+        }
+        return won;
+    }
 
+    private boolean won = false;
     private int score = 0;
 }

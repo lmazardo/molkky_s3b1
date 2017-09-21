@@ -50,4 +50,23 @@ public class MolkkyGameTest {
         assertEquals(8, game.score());
 
     }
+
+    @Test
+    public void isGameWon() {
+        MolkyGame game = new MolkyGame();
+
+        game.knockOver(50);
+
+        assertEquals(true, game.won());
+    }
+
+    @Test
+    public void isScoreAbove50() {
+        MolkyGame game = new MolkyGame();
+
+        game.knockOver(55);
+
+        assertEquals(false, game.won());
+        assertEquals(25,game.score());
+    }
 }
